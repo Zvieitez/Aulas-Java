@@ -1,0 +1,46 @@
+Prova do módulo
+
+Consiste em criar um sistema de banco;
+Criar as seis classes seguindo o padrão JavaBean,
+ou seja criando os atributos privados e os métodos GET e SET.
+
+!   As classes devem herdar(extends) de suas classes "pai".
+	Contas corrente e poupança devem herdar de conta.
+
+!!  Detalhes das contas especializadas:
+	- Conta corrente terá uma taxa que sera usada no método SACAR,
+	  onde cada saque, terá que acrescentar essa taxa ao saque.
+	- Conta Poupança terá um rendimento que deverá no método DEPOSITAR,
+	  onde cada deposito deverá acrescentar o valor do rendimento.
+
+!!! As classes pessoas não terão métodos, apenas atributos específicos a cada.
+
+1 Conta
+	int numeroConta
+	Pessoa titularDaConta
+	doble saldo
+
+	void sacar(double valor)
+	void depositar(doble valor)
+	void imprimirSaldo
+2 Conta Corrente
+	double taxa	
+
+	void sacar(double valor)
+	
+3 Conta Poupança
+	double rendimento
+
+	void depositar(double valor)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+4 Pessoa
+	String nome
+	int idade
+	String telefone
+	String endereco	
+
+	void imprimirInformações
+5 PessoaFisica
+	String cpf
+6 PessoaJuridica
+	String cnpj

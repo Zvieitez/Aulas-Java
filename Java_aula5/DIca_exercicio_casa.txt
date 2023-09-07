@@ -1,0 +1,19 @@
+//2
+        Endereco endereco = new Endereco();
+        endereco.rua = "Rua tal";
+        endereco.numero = "12 casa A";
+        endereco.complemento = "asddsd";
+        endereco.cep = "52120315";
+
+        //1
+        Aluno aluno = new Aluno();
+        aluno.nome = "Nome";
+        aluno.idade = 10;
+        aluno.genero = "m";
+        aluno.telefone = "12345-567";
+        //3
+        aluno.endereco = endereco;
+
+        //4
+        System.out.println(aluno.nome);
+        System.out.println(aluno.endereco.rua);

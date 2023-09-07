@@ -1,0 +1,8 @@
+Criar duas classes Aluno e Endereço, com seus respectivos atributos e desenvolva os fluxos de interação do menu.
+Aluno: nome, idade, genero, telefone e endereco.
+Endereco: numero, rua, complemento e cep
+
+(1) Cadastro Aluno		(3) Vincular Endereço ao Aluno
+(2) Cadastro Endereço	(4) Imprimir
+   (5) Sair
+O exercício deve ser desenvolvido dentro de um while com switch

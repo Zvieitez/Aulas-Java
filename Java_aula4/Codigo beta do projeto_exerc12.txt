@@ -1,0 +1,112 @@
+import java.math.BigDecimal;
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        /**
+         * Declaracao dos arraus
+         * Para esse exemplo limitei em 10 o tamanho desse array
+         */
+        String[] arrNome = new String[10];
+        int[] arrIdade = new int[10];
+        String[] arrSexo = new String[10];
+        String[] arrAno = new String[10];
+
+        String[] arrRua = new String[10];
+        int[] arrNumero = new int[10];
+        String[] arrBairro = new String[10];
+        String[] arrCep = new String[10];
+
+        // Solicitando pela primeira vez a opcao
+        System.out.println("(1) Cadastro de alunos");
+        System.out.println("(2) Cadastro de enderecos");
+        System.out.println("(3) Imprimir alunos");
+        System.out.println("(4) Imprimir enderecos");
+        System.out.println("(5) Sair");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Selecione uma opcao de 1 a 5");
+        int opcapEscolhida = Integer.parseInt(scanner.nextLine());
+
+        // indice dos arrays para controle
+        int indiceAluno = 0;
+        int indiceEndereco = 0;
+
+        // estrutura de repeticao pra cadastrar
+        while(opcapEscolhida <= 4) {
+            if(opcapEscolhida == 1){
+                System.out.println("Informe o nome do Aluno");
+                String nome = scanner.nextLine();
+                arrNome[indiceAluno] = nome;
+
+                System.out.println("Informe a idade do aluno");
+                int idade = Integer.parseInt(scanner.nextLine());
+                arrIdade[indiceAluno] = idade;
+
+                System.out.println("Informe o sexo do aluno (M/F)");
+                String sexo = scanner.nextLine();
+                arrSexo[indiceAluno] = sexo;
+
+                System.out.println("Informe o ano do nascimento do aluno");
+                String anoNascimento = scanner.nextLine();
+                arrAno[indiceAluno] = anoNascimento;
+
+                indiceAluno++;
+            }
+
+            if(opcapEscolhida == 2){
+                System.out.println("Informe o nome da rua:");
+                String rua = scanner.nextLine();
+                arrRua[indiceEndereco] = rua;
+
+                System.out.println("Informe o numero");
+                int numero = Integer.parseInt(scanner.nextLine());
+                arrNumero[indiceEndereco] = numero;
+
+                System.out.println("Informe o bairro");
+                String bairro = scanner.nextLine();
+                arrBairro[indiceEndereco] = bairro;
+
+                System.out.println("Informe o cep");
+                String cep = scanner.nextLine();
+                arrCep[indiceEndereco] = cep;
+
+                indiceEndereco++;
+            }
+
+            if(opcapEscolhida == 3){
+
+                for (int i = 0; i < indiceAluno; i++) {
+                    System.out.println(arrNome[i]);
+                    System.out.println(arrIdade[i]);
+                    System.out.println(arrSexo[i]);
+                    System.out.println(arrAno[i]);
+                    System.out.println("==============================================");
+                }
+
+            }
+
+            if(opcapEscolhida == 4){
+                int x = 0;
+                while (x < indiceEndereco){
+                    System.out.println(arrRua[x]);
+                    System.out.println(arrNumero[x]);
+                    System.out.println(arrBairro[x]);
+                    System.out.println(arrCep[x]);
+                    System.out.println("==============================================");
+                    x++;
+                }
+            }
+
+            // Perguntando se ainda vai continuar cadastrando
+            System.out.println("(1) Cadastro de alunos");
+            System.out.println("(2) Cadastro de enderecos");
+            System.out.println("(3) Imprimir alunos");
+            System.out.println("(4) Imprimir enderecos");
+            System.out.println("(5) Sair");
+
+            System.out.println("Selecione uma opcao de 1 a 5");
+            opcapEscolhida = Integer.parseInt(scanner.nextLine());
+        }
+    }
+}
